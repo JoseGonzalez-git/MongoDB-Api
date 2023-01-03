@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "72719bef-a2c2-4807-897f-8f4183ddf42e",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17517961"
+	},
+	"item": [
+		{
+			"name": "create a item into menu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sopa de Pollo\",\r\n    \"category\": \"Sopas\",\r\n    \"price\": 99.9,\r\n    \"imgUrl\": \"https://www.comedera.com/wp-content/uploads/2013/07/sopa-de-pollo-lista.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/menu/product/?Content-Type=application/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"menu",
+						"product",
+						""
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Menu (All products)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/menu/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"menu",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/menu/?id=63b421263693f59ebd1e4897",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/menu/?id=63b421263693f59ebd1e4897",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"menu",
+						""
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "63b421263693f59ebd1e4897"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
