@@ -4,6 +4,6 @@ import config from "../config";
   mongoose.set("strictQuery", true);
   mongoose
     .connect(config.mongodbURL, {})
-    .then((db) => console.info(db.connection.name))
-    .catch((error) => console.error(error));
+    .then((db) => console.log(db.connection.name))
+    .catch((error) => console.log(error));
 })();
